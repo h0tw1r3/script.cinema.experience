@@ -26,7 +26,7 @@ triggers                    = ( "Script Start", "Trivia Intro", "Trivia", "Trivi
 
 trivia_settings             = {        "trivia_mode": int( __setting__( "trivia_mode" ) ),
                                  "trivia_total_time": int( float( __setting__( "trivia_total_time" ) ) ),
-                                 "trivia_slide_time": int( float( __setting__( "trivia_slide_time" ) ) ),
+                               "trivia_slide_time_s": int( float( __setting__( "trivia_slide_time_s" ) ) ),
                                "trivia_slide_time_q": int( float( __setting__( "trivia_slide_time_q" ) ) ),
                                "trivia_slide_time_c": int( float( __setting__( "trivia_slide_time_c" ) ) ),
                                "trivia_slide_time_a": int( float( __setting__( "trivia_slide_time_a" ) ) ),
