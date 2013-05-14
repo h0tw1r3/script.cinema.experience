@@ -84,24 +84,24 @@ def _get_slides( paths, movie_mpaa ):
                         tmp_slides += [ [ "", "", "" ] ]
                         clue = answer = still = False
                     tmp_slides[ -1 ][ 0 ] = "__question__" + entry
-                # clue
+                    # clue
                 elif ( clue_format and re.search( clue_format, os.path.basename( entry ), re.IGNORECASE ) ):
                     if ( clue ):
                         tmp_slides += [ [ "", "", "" ] ]
                         question = answer = still = False
-                    tmp_slides[ -1 ][ 1 ] = "__clue__ + entry
+                    tmp_slides[ -1 ][ 1 ] = "__clue__" + entry
                 # answer
                 elif ( answer_format and re.search( answer_format, os.path.basename( entry ), re.IGNORECASE ) ):
                     if ( answer ):
                         tmp_slides += [ [ "", "", "" ] ]
                         question = clue = still = False
                     tmp_slides[ -1 ][ 2 ] = "__answer__" + entry
-                # still
+                    # still
                 elif ( still_format and re.search( still_format, os.path.basename( entry ), re.IGNORECASE ) ):
                     if ( still ):
                         tmp_slides += [ [ "", "", "" ] ]
                         clue = answer = question = False
-                    tmp_slides[ -1 ][ 0 ] = "__still__" + entry 
+                    tmp_slides[ -1 ][ 0 ] = "__still__" + entry
             # add the file as a question TODO: maybe check for valid picture format?
             elif ( entry and os.path.splitext( entry )[ 1 ].lower() in xbmc.getSupportedMedia( "picture" ) ):
                 tmp_slides += [ [ "", "", "__still__" + entry ] ] 

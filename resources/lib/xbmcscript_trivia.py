@@ -170,7 +170,6 @@ class Trivia( xbmcgui.WindowXML ):
             self.watched = []
 
     def _get_slide_timer( self, slide_type="still" ):
-        timer = self.settings[ "trivia_slide_time" ]
         if (slide_type and slide_type == "question"): 
             timer = self.settings[ "trivia_slide_time_q" ]
         elif (slide_type and slide_type == "answer"): 
