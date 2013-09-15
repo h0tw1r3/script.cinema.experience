@@ -867,3 +867,7 @@ msgstr ""
 msgctxt "#32923"
 msgid "   - Skip trailers that use the YouTube Plug-in"
 msgstr ""
+
+msgctxt "#32924"
+msgid "Exit"
+msgstr ""
