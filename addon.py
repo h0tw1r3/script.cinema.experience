@@ -45,8 +45,8 @@ trivia_settings             = {        "trivia_mode": int( __setting__( "trivia_
                                      "trivia_rating": __setting__( "trivia_rating" )
                               }
                               
-trailer_settings             = { "trailer_count": ( 0, 1, 2, 3, 4, 5, 10, )[int( float( __setting__( "trailer_count" ) ) ) ],
-                               "trailer_scraper": ( "amt_database", "amt_current", "local", "xbmc_library", )[int( float( __setting__( "trailer_scraper" ) ) ) ],
+trailer_settings             = { "trailer_count": ( 0, 1, 2, 3, 4, 5, 10, )[ int( float( __setting__( "trailer_count" ) ) ) ],
+                               "trailer_scraper": ( "amt_database", "amt_current", "local", "xbmc_library", )[ int( float( __setting__( "trailer_scraper" ) ) ) ],
                              "trailer_play_mode": int( float( __setting__( "trailer_play_mode" ) ) ),
                        "trailer_download_folder": xbmc.translatePath( __setting__( "trailer_download_folder" ) ).decode('utf-8'),
                                 "trailer_folder": xbmc.translatePath( __setting__( "trailer_folder" ) ).decode('utf-8'),
