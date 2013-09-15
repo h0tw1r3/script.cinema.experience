@@ -12,9 +12,9 @@ __scriptID__      = __addon__.getAddonInfo('id')
 __script__        = __addon__.getAddonInfo('name')
 __addonname__     = __script__
 # language method
-__language__ = __addon__.getLocalizedString
+__language__      = __addon__.getLocalizedString
 # settings method
-__setting__ = __addon__.getSetting
+__setting__       = __addon__.getSetting
 
 true = True
 false = False
