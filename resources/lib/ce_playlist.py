@@ -292,7 +292,7 @@ def get_equivalent_rating( rating ):
             rating = rating.split( " " )[ 1 - ( len( rating.split( " " ) ) == 1 ) ]
     #DEJUS
     elif rating in ( "Livre", "10 Anos", "12 Anos", "14 Anos", "16 Anos", "18 Anos" ):
-        rating = rating   # adding this just incase there is some with different labels in database
+        rating = rating   # adding this just in case there is some with different labels in database
     else:
         rating = ( rating, "NR", )[ rating not in ( "0", "6", "12", "12A", "PG", "15", "16", "18", "R18", "MA", "U", ) ]
     if rating not in ( "G", "PG", "PG-13", "R", "NC-17", "Unrated", "NR" ):
