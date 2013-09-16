@@ -871,3 +871,16 @@ msgstr ""
 msgctxt "#32924"
 msgid "Exit"
 msgstr ""
+
+msgctxt "#32925"
+msgid "Current Settings"
+msgstr ""
+
+msgctxt "#32926"
+msgid "Modify"
+msgstr ""
+
+msgctxt "#32927"
+msgid "Default"
+msgstr ""
+
