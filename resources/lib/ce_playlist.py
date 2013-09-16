@@ -367,7 +367,7 @@ def _get_queued_video_info( feature = 0 ):
     xbmc.log( "%s - Title: %s" % ( log_message, movie_title, ), level=xbmc.LOGDEBUG )
     xbmc.log( "%s - Path: %s" % ( log_message, path, ), level=xbmc.LOGDEBUG )
     xbmc.log( "%s - Genre: %s" % ( log_message, genre, ), level=xbmc.LOGDEBUG )
-    xbmc.log( "%s - MPAA: %s" % ( log_message, short_mpaa, ), level=xbmc.LOGDEBUG )
+    xbmc.log( "%s - Rating: %s" % ( log_message, short_mpaa, ), level=xbmc.LOGDEBUG )
     xbmc.log( "%s - Audio: %s" % ( log_message, audio, ), level=xbmc.LOGDEBUG )
     if video_settings[ "audio_videos_folder" ]:
         xbmc.log( "%s - Folder: %s" % ( log_message, ( video_settings[ "audio_videos_folder" ] + audio_formats.get( audio, "Other" ) + video_settings[ "audio_videos_folder" ][ -1 ], ) ), level=xbmc.LOGDEBUG )
