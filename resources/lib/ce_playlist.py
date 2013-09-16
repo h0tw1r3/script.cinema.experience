@@ -284,6 +284,7 @@ def get_equivalent_rating( rating ):
         else:
             rating = rating.split( " " )[ 1 - ( len( rating.split( " " ) ) == 1 ) ]
         rating = ( rating, "NR", )[ rating not in ( "12", "12A", "PG", "15", "18", "R18", "MA", "U", ) ]
+    #FSK
     elif rating.startswith("FSK"):
         if rating.startswith( "FSK:" ):
             rating = rating.split( ":" )[ 1 - ( len( rating.split( ":" ) ) == 1 ) ]
