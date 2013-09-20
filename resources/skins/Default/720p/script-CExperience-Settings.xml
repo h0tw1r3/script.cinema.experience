@@ -16,22 +16,14 @@
             
             <control type="group" id="9007"> <!-- Help Screen -->
                 <posx>300</posx>
-                <posy>602</posy>            
-                <animation effect="fade" start="100" end="0" time="0" condition="!SubString(Window(10001).Property(help),true)">conditional</animation>
-                <animation effect="fade" start="0" end="100" delay="300" time="200" condition="SubString(Window(10001).Property(help),true)">conditional</animation>
-                <animation effect="fade" start="100" end="0" time="0" condition="SubString(Window(10001).Property(help),true)">WindowClose</animation>
-                <!--
-                <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(105) | ControlGroup(9006).HasFocus">conditional</animation>
-                -->
-                <visible>ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9002).HasFocus | ControlGroup(9003).HasFocus | ControlGroup(9004).HasFocus | ControlGroup(9005).HasFocus | ControlGroup(9006).HasFocus</visible>
+                <posy>600</posy>            
+                <animation effect="fade" start="100" end="0" time="0" condition="!SubString(Window(10001).Property(CEhelp),true)">conditional</animation>
+                <animation effect="fade" start="0" end="100" delay="300" time="200" condition="SubString(Window(10001).Property(CEhelp),true)">conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="SubString(Window(10001).Property(CEhelp),true)">WindowClose</animation>
+                <visible>SubString(Window(10001).Property(CEhelp),true)</visible>
                 <control type="image" id ="220">
-                    <!--
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    -->
                     <width>980</width>
-                    <height>200</height>
-                    <!--<aspectratio scalediffuse="false">keep</aspectratio>-->
+                    <height>100</height>
                     <texture>default-menu.png</texture>
                 </control>
                 <control type="label" id="206">
@@ -63,15 +55,14 @@
                     <label>This is where a more descriptive explanation[CR]of the setting will go[CR]Hopefully this will assist all the users</label>
                 </control>
             </control>
-
             <control type="group" id="9001">
                 <posx>0</posx>
                 <posy>0</posy>            
-                <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(100) & !ControlGroup(9001).HasFocus">conditional</animation>
-                <animation effect="fade" start="0" end="100" delay="300" time="200" condition="Control.HasFocus(100) | ControlGroup(9001).HasFocus">conditional</animation>
-                <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(100) | ControlGroup(9001).HasFocus">WindowClose</animation>
-                <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(100) | ControlGroup(9001).HasFocus">conditional</animation>
-                <visible>Control.HasFocus(100) | ControlGroup(9001).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="0" condition="!SubString(Window(10001).Property(CEmenu),true)">conditional</animation>
+                <animation effect="fade" start="0" end="100" delay="300" time="200" condition="SubString(Window(10001).Property(CEmenu),true)">conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="SubString(Window(10001).Property(CEmenu),true)">WindowClose</animation>
+                <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="SubString(Window(10001).Property(CEmenu),true)">conditional</animation>
+                <visible>SubString(Window(10001).Property(CEmenu),true)</visible>
                 <control type="image" id ="220">
                     <width>980</width>
                     <height>600</height>
@@ -195,7 +186,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="111">
-                        <description>Setting 1</description>
+                        <description>Setting 2</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -208,7 +199,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="112">
-                        <description>Setting 1</description>
+                        <description>Setting 3</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -221,7 +212,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="113">
-                        <description>Setting 1</description>
+                        <description>Setting 4</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -234,7 +225,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="114">
-                        <description>Setting 1</description>
+                        <description>Setting 5</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -247,7 +238,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="115">
-                        <description>Setting 1</description>
+                        <description>Setting 6</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -260,7 +251,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="116">
-                        <description>Setting 1</description>
+                        <description>Setting 7</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -273,7 +264,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="117">
-                        <description>Setting 1</description>
+                        <description>Setting 8</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -286,7 +277,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="118">
-                        <description>Setting 1</description>
+                        <description>Setting 9</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -299,7 +290,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="119">
-                        <description>Setting 1</description>
+                        <description>Setting 10</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -312,7 +303,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="120">
-                        <description>Setting 1</description>
+                        <description>Setting 11</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -325,7 +316,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="121">
-                        <description>Setting 1</description>
+                        <description>Setting 12</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -338,7 +329,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="122">
-                        <description>Setting 1</description>
+                        <description>Setting 13</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -351,7 +342,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="123">
-                        <description>Setting 1</description>
+                        <description>Setting 14</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -364,7 +355,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="124">
-                        <description>Setting 1</description>
+                        <description>Setting 15</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -377,7 +368,7 @@
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                     <control type="button" id="125">
-                        <description>Setting 1</description>
+                        <description>Setting 16</description>
                         <label></label>
                         <label2></label2>
                         <align>left</align>
@@ -387,6 +378,45 @@
                         <disabledcolor>60d0d0d0</disabledcolor>
                         <shadowcolor>ff000000</shadowcolor>
                         <visible>!IsEmpty(Window(10001).Property(Setting.16))</visible>
+                        <wrapmultiline>true</wrapmultiline>
+                    </control>
+                    <control type="button" id="126">
+                        <description>Setting 17</description>
+                        <label></label>
+                        <label2></label2>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>ffffffff</textcolor>
+                        <textoffsetx>10</textoffsetx>
+                        <disabledcolor>60d0d0d0</disabledcolor>
+                        <shadowcolor>ff000000</shadowcolor>
+                        <visible>!IsEmpty(Window(10001).Property(Setting.17))</visible>
+                        <wrapmultiline>true</wrapmultiline>
+                    </control>
+                    <control type="button" id="127">
+                        <description>Setting 18</description>
+                        <label></label>
+                        <label2></label2>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>ffffffff</textcolor>
+                        <textoffsetx>10</textoffsetx>
+                        <disabledcolor>60d0d0d0</disabledcolor>
+                        <shadowcolor>ff000000</shadowcolor>
+                        <visible>!IsEmpty(Window(10001).Property(Setting.18))</visible>
+                        <wrapmultiline>true</wrapmultiline>
+                    </control>
+                    <control type="button" id="128">
+                        <description>Setting 19</description>
+                        <label></label>
+                        <label2></label2>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>ffffffff</textcolor>
+                        <textoffsetx>10</textoffsetx>
+                        <disabledcolor>60d0d0d0</disabledcolor>
+                        <shadowcolor>ff000000</shadowcolor>
+                        <visible>!IsEmpty(Window(10001).Property(Setting.19))</visible>
                         <wrapmultiline>true</wrapmultiline>
                     </control>
                 </control> 
@@ -399,7 +429,7 @@
                 <animation effect="fade" start="0" end="100" delay="300" time="200" condition="Control.HasFocus(101) | ControlGroup(9002).HasFocus">conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(101) | ControlGroup(9002).HasFocus">WindowClose</animation>
                 <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(101) | ControlGroup(9002).HasFocus">conditional</animation>
-                <visible>Control.HasFocus(101) | ControlGroup(9002).HasFocus</visible>
+                <visible>ControlGroup(9002).HasFocus</visible>
                 <control type="image" id ="220">
                     <width>980</width>
                     <height>500</height>
@@ -428,7 +458,7 @@
                 <animation effect="fade" start="0" end="100" delay="300" time="200" condition="Control.HasFocus(102) | ControlGroup(9003).HasFocus">conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(102) | ControlGroup(9003).HasFocus">WindowClose</animation>
                 <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(102) | ControlGroup(9003).HasFocus">conditional</animation>
-                <visible>Control.HasFocus(102) | ControlGroup(9003).HasFocus</visible>
+                <visible>ControlGroup(9003).HasFocus</visible>
                 <control type="image" id ="220">
                     <width>980</width>
                     <height>500</height>
@@ -457,7 +487,7 @@
                 <animation effect="fade" start="0" end="100" delay="300" time="200" condition="Control.HasFocus(103) | ControlGroup(9004).HasFocus">conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(103) | ControlGroup(9004).HasFocus">WindowClose</animation>
                 <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(103) | ControlGroup(9004).HasFocus">conditional</animation>
-                <visible>Control.HasFocus(103) | ControlGroup(9004).HasFocus</visible>
+                <visible>ControlGroup(9004).HasFocus</visible>
                 <control type="image" id ="220">
                     <width>980</width>
                     <height>500</height>
@@ -486,7 +516,7 @@
                 <animation effect="fade" start="0" end="100" delay="300" time="200" condition="Control.HasFocus(104) | ControlGroup(9005).HasFocus">conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(104) | ControlGroup(9005).HasFocus">WindowClose</animation>
                 <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(104) | ControlGroup(9005).HasFocus">conditional</animation>
-                <visible>Control.HasFocus(104) | ControlGroup(9005).HasFocus</visible>
+                <visible>ControlGroup(9005).HasFocus</visible>
                 <control type="image" id ="220">
                     <width>980</width>
                     <height>500</height>
@@ -515,7 +545,7 @@
                 <animation effect="fade" start="0" end="100" delay="300" time="200" condition="Control.HasFocus(105) | ControlGroup(9006).HasFocus">conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(105) | ControlGroup(9006).HasFocus">WindowClose</animation>
                 <animation effect="slide" end="300,0" time="600" tween="quadratic" easing="out" condition="Control.HasFocus(105) | ControlGroup(9006).HasFocus">conditional</animation>
-                <visible>Control.HasFocus(105) | ControlGroup(9006).HasFocus</visible>
+                <visible>ControlGroup(9006).HasFocus</visible>
                 <control type="image" id="220">
                     <width>980</width>
                     <height>500</height>
@@ -568,32 +598,10 @@
                     <onup>106</onup>
                     <ondown>101</ondown>
                 </control>                
-                <control type="button" id="101"> <!-- Special Videos -->
-                    <description>Special Videos</description>
-                    <posx>20</posx>
-                    <posy>50</posy>
-                    <height>40</height>
-                    <width>270</width>
-                    <textoffsetx>10</textoffsetx>
-                    <textwidth>250</textwidth>
-                    <aligny>center</aligny>
-                    <font>font13</font>
-                    <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FFFFFFFF</focusedcolor>
-                    <label>$ADDON[script.cinema.experience 32802]</label>
-                    <texturefocus border="5">button-focus.png</texturefocus>
-                    <texturenofocus>-</texturenofocus>
-                    <pulseonselect>false</pulseonselect>
-                    <onclick></onclick>
-                    <onleft>9000</onleft>
-                    <onright>9002</onright>
-                    <onup>100</onup>
-                    <ondown>102</ondown>
-                </control>
-                <control type="button" id="102"> <!-- Trailers -->
+                <control type="button" id="101"> 
                     <description>Trailers</description>
                     <posx>20</posx>
-                    <posy>90</posy>
+                    <posy>50</posy>
                     <height>40</height>
                     <width>270</width>
                     <textoffsetx>10</textoffsetx>
@@ -608,14 +616,14 @@
                     <pulseonselect>false</pulseonselect>
                     <onclick></onclick>
                     <onleft>9000</onleft>
-                    <onright>9003</onright>
-                    <onup>101</onup>
-                    <ondown>103</ondown>
-                </control>                
-                <control type="button" id="103"> <!-- Feature Presentations -->
-                    <description>Feature Presentations</description>
+                    <onright>9001</onright>
+                    <onup>100</onup>
+                    <ondown>102</ondown>
+                </control>
+                <control type="button" id="102"> 
+                    <description>Features</description>
                     <posx>20</posx>
-                    <posy>130</posy>
+                    <posy>90</posy>
                     <height>40</height>
                     <width>270</width>
                     <textoffsetx>10</textoffsetx>
@@ -630,7 +638,29 @@
                     <pulseonselect>false</pulseonselect>
                     <onclick></onclick>
                     <onleft>9000</onleft>
-                    <onright>9004</onright>
+                    <onright>9001</onright>
+                    <onup>101</onup>
+                    <ondown>103</ondown>
+                </control>                
+                <control type="button" id="103"> 
+                    <description>Special Videos</description>
+                    <posx>20</posx>
+                    <posy>130</posy>
+                    <height>40</height>
+                    <width>270</width>
+                    <textoffsetx>10</textoffsetx>
+                    <textwidth>250</textwidth>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>FFFFFFFF</textcolor>
+                    <focusedcolor>FFFFFFFF</focusedcolor>
+                    <label>$ADDON[script.cinema.experience 32802]</label>
+                    <texturefocus border="5">button-focus.png</texturefocus>
+                    <texturenofocus>-</texturenofocus>
+                    <pulseonselect>false</pulseonselect>
+                    <onclick></onclick>
+                    <onleft>9000</onleft>
+                    <onright>9001</onright>
                     <onup>102</onup>
                     <ondown>104</ondown>
                 </control>
