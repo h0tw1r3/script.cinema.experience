@@ -887,3 +887,8 @@ msgstr ""
 msgctxt "#32928"
 msgid "OK"
 msgstr ""
+
+msgctxt "#32929"
+msgid "Only use trailers from unwatched movies"
+msgstr ""
+
