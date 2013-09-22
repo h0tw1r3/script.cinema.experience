@@ -13,9 +13,8 @@ triggers                 = sys.modules[ "__main__" ].triggers
 trivia_settings          = sys.modules[ "__main__" ].trivia_settings
 trailer_settings         = sys.modules[ "__main__" ].trailer_settings
 video_settings           = sys.modules[ "__main__" ].video_settings
-feature_settings         = sys.modules[ "__main__" ].feature_settings
+general_settings         = sys.modules[ "__main__" ].general_settings
 ha_settings              = sys.modules[ "__main__" ].ha_settings
-extra_settings           = sys.modules[ "__main__" ].extra_settings
 BASE_CACHE_PATH          = sys.modules["__main__"].BASE_CACHE_PATH
 BASE_RESOURCE_PATH       = sys.modules["__main__"].BASE_RESOURCE_PATH
 BASE_CURRENT_SOURCE_PATH = sys.modules["__main__"].BASE_CURRENT_SOURCE_PATH
@@ -23,7 +22,7 @@ __addon__ = xbmcaddon.Addon( __scriptID__ )
 # language method
 __language__ = __addon__.getLocalizedString
 
-number_of_features = feature_settings[ "number_of_features" ] + 1
+number_of_features = general_settings[ "number_of_features" ] + 1
 playback = ""
 sys.path.append( os.path.join( BASE_RESOURCE_PATH, "lib" ) )
 headings = ( __language__(32600), __language__(32601), __language__(32602), __language__(32603), __language__(32604), __language__(32605), __language__(32606), __language__(32607), __language__(32608), __language__(32609), __language__(32610), __language__(32611), __language__(32612) )
@@ -59,7 +58,7 @@ class Script():
             # wait until Video Library shows
             while not xbmc.getCondVisibility( "Container.Content(movies)" ):
                 pass
-            if feature_settings[ "enable_notification" ]:
+            if general_settings[ "enable_notification" ]:
                 xbmc.executebuiltin("Notification( %s, %s, %d, %s)" % (header, __language__( 32546 ), 300000, image) )
             # wait until playlist is full to the required number of features
             xbmc.log( "[ script.cinema.experience ] - Waiting for queue to be filled with %s Feature films" % number_of_features, level=xbmc.LOGNOTICE )
@@ -69,7 +68,7 @@ class Script():
                     xbmc.log( "[ script.cinema.experience ] - User queued %s of %s Feature films" % (playlist.size(), number_of_features), level=xbmc.LOGNOTICE )
                     header1 = header + " - Feature " + "%d" % playlist.size()
                     message = __language__( 32543 ) + playlist[playlist.size() -1].getdescription()
-                    if feature_settings[ "enable_notification" ]:
+                    if general_settings[ "enable_notification" ]:
                         xbmc.executebuiltin("Notification( %s, %s, %d, %s)" % (header1, message, time_delay, image) )
                     count = playlist.size()
                     xbmc.sleep(time_delay*2)
@@ -80,12 +79,12 @@ class Script():
             if not early_exit:
                 header1 = header + " - Feature " + "%d" % playlist.size()
                 message = __language__( 32543 ) + playlist[playlist.size() -1].getdescription()
-                if feature_settings[ "enable_notification" ]:
+                if general_settings[ "enable_notification" ]:
                     xbmc.executebuiltin("Notification( %s, %s, %d, %s)" % (header1, message, time_delay, image) )
                 early_exit = False
         # If for some reason the limit does not get reached and the window changed, cancel script
         if playlist.size() < number_of_features and library_view != "oldway":
-            if feature_settings[ "enable_notification" ]:
+            if general_settings[ "enable_notification" ]:
                 xbmc.executebuiltin("Notification( %s, %s, %d, %s)" % (header, __language__( 32544 ), time_delay, image) )
             _clear_playlists()
         else:
@@ -180,13 +179,13 @@ class Script():
                 xbmc.log( "[ script.cinema.experience ] - Feature #%-2d - %s" % ( feature_count, movie_title ), level=xbmc.LOGNOTICE )
                 movie_titles = movie_titles + movie_title + "<li>"
             movie_titles = movie_titles.rstrip("<li>")
-            if extra_settings[ "voxcommando" ]:
+            if general_settings[ "voxcommando" ]:
                 self.broadcastUDP( "<b>CElaunch." + str( playlistsize ) + "<li>" + movie_titles + "</b>", port = 33000 )
         else:
             # get the queued video info
             movie_title = playlist[ 0 ].getdescription()
             xbmc.log( "[ script.cinema.experience ] - Feature - %s" % movie_title, level=xbmc.LOGNOTICE )
-            if extra_settings[ "voxcommando" ]:
+            if general_settings[ "voxcommando" ]:
                 self.broadcastUDP( "<b>CElaunch<li>" + movie_title + "</b>", port = 33000 )
 
     # No longer works in Frodo to be removed

@@ -102,17 +102,19 @@ video_settings             = { "mte_intro": ( 0, 1, 1, 2, 3, 4, 5, )[ int( float
                             "trivia_outro": ( 0, 1, 1, 2, 3, 4, 5, )[ int( float( __setting__( "trivia_outro" ) ) ) ],
                        "trivia_outro_type": ( "file", "folder" )[ int( float( __setting__( "trivia_outro" ) ) ) > 1 ],
                        "trivia_outro_file": xbmc.translatePath( __setting__( "trivia_outro_file" ) ).decode('utf-8'),
-                     "trivia_outro_folder": xbmc.translatePath( __setting__( "trivia_outro_folder" ) ).decode('utf-8')
+                     "trivia_outro_folder": xbmc.translatePath( __setting__( "trivia_outro_folder" ) ).decode('utf-8'),
+                      "intermission_video": ( 0, 1, 1, 2, 3, 4, 5, )[ int( float( __setting__( "intermission_video" ) ) ) ],
+                 "intermission_video_type": ( "file", "folder" )[ int( __setting__( "intermission_video" ) ) > 1 ],
+                 "intermission_video_file": xbmc.translatePath( __setting__( "intermission_video_file" ) ).decode('utf-8'),
+               "intermission_video_folder": xbmc.translatePath( __setting__( "intermission_video_folder" ) ).decode('utf-8'),
+                      "intermission_audio": eval( __setting__( "intermission_audio" ) ),
+                    "intermission_ratings": eval( __setting__( "intermission_ratings" ) )
                                }
 
-feature_settings             = { "enable_notification": eval( __setting__( "enable_notification" ) ),
+general_settings             = { "enable_notification": eval( __setting__( "enable_notification" ) ),
                                   "number_of_features": int( float( __setting__( "number_of_features" ) ) ),
-                                  "intermission_video": ( 0, 1, 1, 2, 3, 4, 5, )[ int( float( __setting__( "intermission_video" ) ) ) ],
-                             "intermission_video_type": ( "file", "folder" )[ int( __setting__( "intermission_video" ) ) > 1 ],
-                             "intermission_video_file": xbmc.translatePath( __setting__( "intermission_video_file" ) ).decode('utf-8'),
-                           "intermission_video_folder": xbmc.translatePath( __setting__( "intermission_video_folder" ) ).decode('utf-8'),
-                                  "intermission_audio": eval( __setting__( "intermission_audio" ) ),
-                                "intermission_ratings": eval( __setting__( "intermission_ratings" ) )
+                                         "voxcommando": eval( __setting__( "voxcommando" ) ),
+                                       "override_play": eval( __setting__( "override_play" ) )
                                }
 
 ha_settings             = {       "ha_enable": eval( __setting__( "ha_enable" ) ),
@@ -138,8 +140,6 @@ ha_settings             = {       "ha_enable": eval( __setting__( "ha_enable" ) 
                                  "ha_resumed": eval( __setting__( "ha_resumed" ) )
                           }
 
-extra_settings          = {     "voxcommando": eval( __setting__( "voxcommando" ) ) }
-
 audio_formats           = {             "dts": "DTS",
                                         "dca": "DTS",
                                       "dtsma": "DTS-MA",
@@ -151,7 +151,7 @@ audio_formats           = {             "dts": "DTS",
                                      "truehd": "Dolby TrueHD"
                           }
 
-number_of_features = feature_settings[ "number_of_features" ] + 1
+number_of_features = general_settings[ "number_of_features" ] + 1
 playback = ""
 BASE_CACHE_PATH          = os.path.join( xbmc.translatePath( "special://profile" ).decode('utf-8'), "Thumbnails", "Video" )
 BASE_CURRENT_SOURCE_PATH = os.path.join( xbmc.translatePath( "special://profile/addon_data/" ).decode('utf-8'), os.path.basename( __addon__.getAddonInfo('path') ) )

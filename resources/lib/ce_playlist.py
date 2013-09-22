@@ -14,7 +14,7 @@ log_sep = "-"*70
 
 trivia_settings          = sys.modules[ "__main__" ].trivia_settings
 trailer_settings         = sys.modules[ "__main__" ].trailer_settings
-feature_settings         = sys.modules[ "__main__" ].feature_settings
+general_settings         = sys.modules[ "__main__" ].general_settings
 video_settings           = sys.modules[ "__main__" ].video_settings
 audio_formats            = sys.modules[ "__main__" ].audio_formats
 BASE_CACHE_PATH          = sys.modules[ "__main__" ].BASE_CACHE_PATH
